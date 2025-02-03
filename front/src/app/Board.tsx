@@ -4,8 +4,13 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import List from "./List";
 
+type ListItem = {
+  id: string;
+  name: string;
+};
+
 export default function Board() {
-  const [lists, setLists] = useState<any[]>([]);
+  const [lists, setLists] = useState<ListItem[]>([]);
 
   useEffect(() => {
     axios.get("http://localhost:8080/lists").then((res) => setLists(res.data));

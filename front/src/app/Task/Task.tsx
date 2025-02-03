@@ -4,12 +4,16 @@ import { Button } from "antd";
 import TaskStatus from "./TaskStatus";
 import TaskModal from "./TaskModal";
 
-export default function Task({
-  task,
-  onDelete,
-  onUpdate,
-}: {
-  task: any;
+type TaskType = {
+  id: string;
+  title: string;
+  description: string;
+  status: string;
+  updatedAt: string;
+};
+
+type TaskProps = {
+  task: TaskType;
   onDelete: (id: string) => void;
   onUpdate: (
     id: string,
@@ -17,7 +21,9 @@ export default function Task({
     newDescription: string,
     newStatus: string
   ) => void;
-}) {
+};
+
+export default function Task({ task, onDelete, onUpdate }: TaskProps) {
   const [isEditing, setIsEditing] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newTitle, setNewTitle] = useState(task.title);

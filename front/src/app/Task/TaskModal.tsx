@@ -1,5 +1,26 @@
 import { Modal, Input, Select } from "antd";
 
+type TaskType = {
+  id: string;
+  title: string;
+  description: string;
+  status: string;
+  updatedAt: string;
+};
+
+type TaskModalProps = {
+  task: TaskType;
+  isModalOpen: boolean;
+  handleClose: () => void;
+  handleSave: () => void;
+  newTitle: string;
+  setNewTitle: (title: string) => void;
+  newDescription: string;
+  setNewDescription: (description: string) => void;
+  newStatus: string;
+  setNewStatus: (status: string) => void;
+};
+
 export default function TaskModal({
   task,
   isModalOpen,
@@ -11,18 +32,7 @@ export default function TaskModal({
   setNewDescription,
   newStatus,
   setNewStatus,
-}: {
-  task: any;
-  isModalOpen: boolean;
-  handleClose: () => void;
-  handleSave: () => void;
-  newTitle: string;
-  setNewTitle: (title: string) => void;
-  newDescription: string;
-  setNewDescription: (description: string) => void;
-  newStatus: string;
-  setNewStatus: (status: string) => void;
-}) {
+}: TaskModalProps) {
   return (
     <Modal
       title="Edit Task"

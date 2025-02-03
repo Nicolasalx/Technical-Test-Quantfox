@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { DeleteOutlined } from "@ant-design/icons";
 import axios from "axios";
@@ -11,9 +9,17 @@ type ListProps = {
   onDelete: (id: string) => void;
 };
 
+type TaskType = {
+  id: string;
+  title: string;
+  description: string;
+  status: string;
+  updatedAt: string;
+};
+
 const List = ({ id, name, onDelete }: ListProps) => {
   const [taskTitle, setTaskTitle] = useState<string>("");
-  const [tasks, setTasks] = useState<any[]>([]);
+  const [tasks, setTasks] = useState<TaskType[]>([]);
   const [isEditing, setIsEditing] = useState(false);
   const [newName, setNewName] = useState(name);
 
