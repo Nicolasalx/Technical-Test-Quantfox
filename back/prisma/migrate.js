@@ -1,6 +1,6 @@
-import { PrismaClient } from '@prisma/client';
-import fs from 'fs';
-import path from 'path';
+const { PrismaClient } = require('@prisma/client');
+const fs = require('fs');
+const path = require('path');
 
 const prisma = new PrismaClient();
 
@@ -60,7 +60,7 @@ async function migrate(scriptsDir) {
   }
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (require.main === module) {
   const scriptsDir = process.argv[2];
   if (!scriptsDir) {
     console.error('You must specify a folder path containing the SQL files.');
@@ -69,4 +69,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   migrate(scriptsDir);
 }
 
-export default migrate;
+module.exports = migrate;

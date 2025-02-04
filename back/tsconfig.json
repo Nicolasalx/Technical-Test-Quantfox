@@ -13,7 +13,7 @@
     "paths": {
       "@prisma/*": ["prisma/*"],
       "@common/*": ["src/common/*"],
-      "@microservices/*": ["src/microservices/*"],
+      "@microservices/*": ["src/microservices/*"]
     },
     "incremental": true,
     "skipLibCheck": true,
@@ -22,5 +22,6 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false
-  }
+  },
+  "exclude": ["node_modules", "dist"]
 }
