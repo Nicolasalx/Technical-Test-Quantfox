@@ -250,6 +250,9 @@ We use **Swagger** to provide an interactive API documentation for all the backe
 
 http://localhost:8080/api
 
+![image](https://github.com/user-attachments/assets/68acb09e-7388-4977-b8fe-bd48997ee7a1)
+
+
 This will open the Swagger interface, where you can see all available API routes, their descriptions, request parameters, and responses.
 
 - **Interactive UI**: Allows you to test endpoints directly from the documentation.
