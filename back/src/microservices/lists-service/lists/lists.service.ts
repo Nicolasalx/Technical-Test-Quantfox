@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { CreateListDto } from 'src/common/dtos/create-list.dto';
-import { UpdateListDto } from 'src/common/dtos/update-list.dto';
-import { PrismaService } from 'src/microservices/prisma-service/prisma/prisma.service';
+import { CreateListDto } from '@common/dtos/create-list.dto';
+import { UpdateListDto } from '@common/dtos/update-list.dto';
+import { PrismaService } from '@microservices/prisma-service/prisma/prisma.service';
 
 @Injectable()
 export class ListsService {

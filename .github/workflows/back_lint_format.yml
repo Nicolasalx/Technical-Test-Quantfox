@@ -3,7 +3,7 @@ name: "Back: Lint and Format Validation"
 on:
   push:
     paths:
-      - 'back/**'
+      - "back/**"
 
 jobs:
   lint:
@@ -24,7 +24,7 @@ jobs:
 
       - name: Run ESLint
         working-directory: back
-        run: npx eslint . --ext .js,.ts
+        run: npx eslint .'
 
       - name: Run Prettier Check
         working-directory: back

@@ -12,7 +12,8 @@
     "baseUrl": "./",
     "paths": {
       "@prisma/*": ["prisma/*"],
-      "@common/*": ["src/common/*"]
+      "@common/*": ["src/common/*"],
+      "@microservices/*": ["src/microservices/*"],
     },
     "incremental": true,
     "skipLibCheck": true,

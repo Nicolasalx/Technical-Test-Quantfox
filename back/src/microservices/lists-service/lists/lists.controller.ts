@@ -8,8 +8,8 @@ import {
   Put,
 } from '@nestjs/common';
 import { ListsService } from './lists.service';
-import { CreateListDto } from 'src/common/dtos/create-list.dto';
-import { UpdateListDto } from 'src/common/dtos/update-list.dto';
+import { CreateListDto } from '@common/dtos/create-list.dto';
+import { UpdateListDto } from '@common/dtos/update-list.dto';
 
 @Controller('lists')
 export class ListsController {
