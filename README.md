@@ -75,6 +75,14 @@ This will start the Next.js application in development mode at `http://localhost
 
 ## **⚙️ Backend: Running the Application**
 
+0. **Setup Env**:
+
+In back directory, you can create a .env file and store this variable:
+
+```sh
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/db"
+```
+
 1. **Database and Migrations**:
 
    - **Spin up Docker container** (for database):
