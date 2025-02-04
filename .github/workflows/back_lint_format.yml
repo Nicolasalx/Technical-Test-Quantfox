@@ -24,7 +24,7 @@ jobs:
 
       - name: Run ESLint
         working-directory: back
-        run: npx eslint .'
+        run: npx eslint .
 
       - name: Run Prettier Check
         working-directory: back
