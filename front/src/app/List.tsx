@@ -28,7 +28,7 @@ const List = ({ id, name, onDelete }: ListProps) => {
       .get(`http://localhost:8080/lists/${id}/tasks`)
       .then((res) => setTasks(res.data))
       .catch((error) =>
-        console.error("Erreur lors du chargement des tâches", error)
+        console.error("Erreur lors du chargement des tâches", error),
       );
   }, [id]);
 
@@ -48,7 +48,7 @@ const List = ({ id, name, onDelete }: ListProps) => {
     try {
       const res = await axios.post(
         `http://localhost:8080/lists/${id}/tasks`,
-        newTask
+        newTask,
       );
       setTasks([...tasks, res.data]);
       setTaskTitle("");
@@ -81,7 +81,7 @@ const List = ({ id, name, onDelete }: ListProps) => {
     taskId: string,
     newTitle: string,
     newDescription: string,
-    newStatus: string
+    newStatus: string,
   ) => {
     try {
       await axios.patch(`http://localhost:8080/lists/${id}/tasks/${taskId}`, {
@@ -98,8 +98,8 @@ const List = ({ id, name, onDelete }: ListProps) => {
                 description: newDescription,
                 status: newStatus,
               }
-            : task
-        )
+            : task,
+        ),
       );
     } catch (error) {
       console.error("Erreur lors de la mise à jour de la tâche", error);

@@ -19,7 +19,7 @@ type TaskProps = {
     id: string,
     newTitle: string,
     newDescription: string,
-    newStatus: string
+    newStatus: string,
   ) => void;
 };
 
