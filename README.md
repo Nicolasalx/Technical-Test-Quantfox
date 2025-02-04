@@ -71,6 +71,20 @@ This will start the Next.js application in development mode at `http://localhost
    npm start
 ```
 
+4. **Launch Test**:
+
+To run the frontend tests, use the following command:
+
+```sh
+npm run test
+```
+
+To view the test coverage, you can use:
+
+```sh
+npm run test:coverage
+```
+
 ---
 
 ## **⚙️ Backend: Running the Application**
@@ -127,6 +141,26 @@ This will start the NestJS application in watch mode.
 
 ```sh
    npm run start:prod
+```
+
+5. **Launch Test**:
+
+To run the backend tests, use the following command:
+
+```sh
+npm run test
+```
+
+To get the test coverage, use:
+
+```sh
+npm run test:coverage
+```
+
+To run end-to-end (E2E) tests, you can use this command:
+
+```sh
+npm run test:e2e
 ```
 
 ---
