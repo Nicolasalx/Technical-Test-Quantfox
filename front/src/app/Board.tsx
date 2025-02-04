@@ -17,7 +17,7 @@ export default function Board() {
   }, []);
 
   const addList = async () => {
-    const newList = { name: `Nouvelle liste` };
+    const newList = { name: `New list` };
     const res = await axios.post("http://localhost:8080/lists", newList);
     setLists([...lists, res.data]);
   };
