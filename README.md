@@ -75,27 +75,7 @@ This will start the Next.js application in development mode at `http://localhost
 
 ## **⚙️ Backend: Running the Application**
 
-1. **Start the development server**:
-
-```sh
-   npm run start:dev
-```
-
-This will start the NestJS application in watch mode.
-
-2. **Build the backend**:
-
-```sh
-   npm run build
-```
-
-3. **Start the production server**:
-
-```sh
-   npm run start:prod
-```
-
-4. **Database and Migrations**:
+1. **Database and Migrations**:
 
    - **Spin up Docker container** (for database):
 
@@ -119,6 +99,26 @@ This will start the NestJS application in watch mode.
 
 ```sh
      npm run db:view
+```
+
+2. **Start the development server**:
+
+```sh
+   npm run start:dev
+```
+
+This will start the NestJS application in watch mode.
+
+3. **Build the backend**:
+
+```sh
+   npm run build
+```
+
+4. **Start the production server**:
+
+```sh
+   npm run start:prod
 ```
 
 ---
