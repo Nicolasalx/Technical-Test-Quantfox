@@ -8,6 +8,11 @@ async function bootstrap() {
   app.enableCors();
   setupSwagger(app);
 
-  await app.listen(8080);
+  await app.listen(8080).catch((error) => {
+    console.error('Error during application startup', error);
+  });
 }
-bootstrap();
+
+bootstrap().catch((error) => {
+  console.error('Bootstrap error', error);
+});

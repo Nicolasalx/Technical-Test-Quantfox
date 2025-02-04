@@ -23,12 +23,15 @@ export function setupSwagger(app: INestApplication) {
     const document = SwaggerModule.createDocument(app, config);
 
     const paths = Object.values(document.paths);
-    paths.forEach((path: any) => {
-      Object.values(path).forEach((method: any) => {
-        if (!method.security) {
-          method.security = [{ 'JWT-auth': [] }];
-        }
-      });
+
+    paths.forEach((path: { [key: string]: any }) => {
+      Object.values(path).forEach(
+        (method: { security?: { [key: string]: any }[] }) => {
+          if (!method.security) {
+            method.security = [{ 'JWT-auth': [] }];
+          }
+        },
+      );
     });
 
     SwaggerModule.setup('api', app, document);
