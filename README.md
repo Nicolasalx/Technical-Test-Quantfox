@@ -16,6 +16,9 @@ This **Todo App** provides a sleek interface for managing tasks efficiently. Key
 
 With the combination of **Next.js** for frontend and **NestJS** for the backend, we aim to provide an optimized and scalable application for task management.
 
+![image](https://github.com/user-attachments/assets/0fa76dbf-4de4-4727-a725-1f23172e78ac)
+
+
 ---
 
 ## **🛠 Project Configuration**
